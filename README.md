@@ -6,35 +6,35 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-red)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
-A deep learning-based **Face Mask Detection System** that detects whether a person is wearing a mask or not using images and real-time webcam input.
+A deep learning-based **Face Mask Detection System** that identifies whether a person is wearing a mask or not using image input and real-time webcam.
 
-This project uses **MobileNetV2 (Transfer Learning)** for classification and **OpenCV DNN** for face detection.
+Built using **MobileNetV2 (Transfer Learning)** and **OpenCV DNN face detection**.
 
 ---
 
 ## 🚀 Features
 
-* 📸 Image-based mask detection using Streamlit Web App
-* 🎥 Real-time face mask detection using webcam
-* 🧠 Transfer Learning with MobileNetV2
-* 📊 Training visualization (Accuracy & Loss)
-* ⚡ Fast and lightweight model
+* 📸 Mask detection from uploaded images
+* 🎥 Real-time detection using webcam
+* 🧠 Transfer learning with MobileNetV2
+* 📊 Accuracy and loss visualization
+* ⚡ Fast and efficient performance
 
 ---
 
 ## 🎥 Demo
 
-### 📊 Training Output
+### 🟢 With Mask Detection
 
-![Training Plot](training_plot.png)
+![With Mask](Screenshot%202026-04-29%20081227.png)
 
-### 📸 Image Detection (Streamlit)
+### 🔴 Without Mask Detection
 
-(Add your screenshot here → improves project quality 🔥)
+![No Mask](Screenshot%202026-04-29%20080734.png)
 
-### 🎥 Real-Time Detection
+### 🌐 Streamlit Web App Interface
 
-(Add webcam screenshot or GIF here)
+![UI](Screenshot%202026-04-29%20081035.png)
 
 ---
 
@@ -50,18 +50,19 @@ This project uses **MobileNetV2 (Transfer Learning)** for classification and **O
 
 ## 📂 Project Structure
 
-```bash
+```bash id="p4u2hk"
 face-mask-detection-system/
 │── app.py
 │── detect_realtime.py
 │── train_model.py
 │── requirements.txt
 │── README.md
-│── training_plot.png
-│── models/
-│    ├── mask_detector.h5
-│    ├── deploy.prototxt
-│    └── res10_300x300_ssd_iter_140000.caffemodel
+│── mask_detector.h5
+│── deploy.prototxt
+│── res10_300x300_ssd_iter_140000.caffemodel
+│── screenshots/
+│── .gitignore
+│── LICENSE
 ```
 
 ---
@@ -83,22 +84,15 @@ Dataset used: **Face Mask Detection Dataset (Kaggle)**
   * 😷 With Mask
   * ❌ Without Mask
 
-👉 Dataset link: https://www.kaggle.com/datasets/omkargurav/face-mask-dataset
+👉 https://www.kaggle.com/datasets/omkargurav/face-mask-dataset
 
 ---
 
 ## ⚙️ Installation
 
-### 1️⃣ Clone the repository
-
-```bash
+```bash id="pj0wya"
 git clone https://github.com/shanmukha0527/face-mask-detection-system.git
 cd face-mask-detection-system
-```
-
-### 2️⃣ Install dependencies
-
-```bash
 pip install -r requirements.txt
 ```
 
@@ -108,27 +102,27 @@ pip install -r requirements.txt
 
 ### 🔹 Run Streamlit Web App
 
-```bash
+```bash id="czkmbx"
 streamlit run app.py
 ```
 
-Upload an image → detect mask instantly.
+Upload image → get prediction instantly.
 
 ---
 
 ### 🔹 Run Real-Time Detection
 
-```bash
+```bash id="24i45z"
 python detect_realtime.py
 ```
 
-Press **Q** to exit webcam.
+Press **Q** to exit.
 
 ---
 
-### 🔹 Train the Model
+### 🔹 Train Model (Optional)
 
-```bash
+```bash id="4e4xdt"
 python train_model.py
 ```
 
@@ -136,19 +130,19 @@ python train_model.py
 
 ## ⚡ How It Works
 
-1. Face detection using OpenCV DNN
+1. Detect face using OpenCV DNN
 2. Extract face region
 3. Resize to 224×224
 4. MobileNetV2 predicts mask / no mask
-5. Bounding box + label displayed
+5. Display result with bounding box
 
 ---
 
 ## ⚠️ Important Notes
 
-* Do NOT upload sensitive files like `kaggle.json`
-* Dataset is not included (download from Kaggle)
-* Model file can be large — use GitHub or Drive
+* ❌ Do NOT upload `kaggle.json`
+* Dataset is not included in repo
+* Model file (`.h5`) is pre-trained
 
 ---
 
@@ -156,8 +150,8 @@ python train_model.py
 
 * 🔔 Alert system for no-mask detection
 * 📊 Count number of people without mask
-* 🌐 Deploy Streamlit app online
-* 📱 Improve UI/UX
+* 🌐 Deploy on Streamlit Cloud
+* 📱 UI improvements
 
 ---
 
@@ -165,9 +159,3 @@ python train_model.py
 
 **Gondrala Shanmukha Akhilesh**
 B.Tech CSE (AI & ML)
-
----
-
-## ⭐ Support
-
-If you like this project, give it a ⭐ on GitHub!
