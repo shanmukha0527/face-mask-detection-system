@@ -1,0 +1,9 @@
+# Make sure you're in the FACE folder, then run:
+echo tensorflow> requirements.txt
+echo opencv-python>> requirements.txt
+echo numpy>> requirements.txt
+echo matplotlib>> requirements.txt
+echo scikit-learn>> requirements.txt
+echo streamlit>> requirements.txt
+echo imutils>> requirements.txt
+echo Pillow>> requirements.txt
